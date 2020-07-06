@@ -1,7 +1,16 @@
 package com.akash.depemp.models;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.Table;
+
+@Table (value = "Department")
 public class Department {
+	@Id
+	@Column (value = "DepartmentID")
 	private int DepartmentID;
+	
+	@Column (value = "DepartmentName")
 	private String DepartmentName;
 	
 	public int getDepartmentID() {
